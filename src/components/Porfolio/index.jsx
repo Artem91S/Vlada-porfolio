@@ -2,7 +2,9 @@ import React from 'react'
 
 function Portfolio() {
   return (
-    <div>Portfolio</div>
+    <div style={{
+      height:'1000px'
+    }}>Portfolio</div>
   )
 }
 
