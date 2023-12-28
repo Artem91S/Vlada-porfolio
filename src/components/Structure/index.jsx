@@ -1,11 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef} from "react";
 import style from "./Structure.module.scss";
 import { BsCardList } from "react-icons/bs";
 import { CgCheck } from "react-icons/cg";
 import { LuListChecks } from "react-icons/lu";
 import { PiListChecks } from "react-icons/pi";
 import { PiFlagCheckeredFill } from "react-icons/pi";
-import { useParallax } from "react-scroll-parallax";
+import { motion, useTransform, useScroll } from "framer-motion";
+
 
 const optionsIcon = [
   {
@@ -35,63 +36,22 @@ const optionsIcon = [
   },
 ];
 
-// const optionsText = [
-//   {
-//     id: "6",
-//     text: "1.Отримання тз від клієнта",
-//   },
-//   {
-//     id: "7",
-//     text: "2.1етап правок",
-//   },
-//   {
-//     id: "8",
-//     text: "3.2 етап правок",
-//   },
-//   {
-//     id: "9",
-//     text: "4.3 етап правок ",
-//   },
-//   {
-//     id: "10",
-//     text: "5. Фінальеі візуалізації покращенної якості",
-//   },
-// ];
 
 function Structure() {
-  const parallax = useParallax({
-     translateX:['100px','-300px'],
-     startScroll:1461,
-    //  endScroll:2188
-    //  speed:[-30],
-    //  startScroll:-20
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    
   });
-  
-  const container =useRef()
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const handleScroll = () => {
-  //     const position = window.pageYOffset;
-  //     setScrollPosition(position);
-  // };
-  
-  // useEffect(() => {
-  //     window.addEventListener('scroll', handleScroll, { passive: true });
-  
-  //     return () => {
-  //         window.removeEventListener('scroll', handleScroll);
-  //     };
-  // }, [])
-  
-  // console.log(scrollPosition);
+  const x = useTransform(scrollYProgress, [0, 1], ["3%", "-65%"]);
   return (
-
-    <section className={style.container} ref={container} >
+    <section className={style.container} ref={targetRef} >
       <h2 className={style.container__title}>some title for block</h2>
       <div className={style.container__option}   >
-        <div className={style.container__option_icons } ref={parallax.ref}  >
+        <motion.div className={style.container__option_icons } style={{ x }}  >
           {optionsIcon.map((icon) => (
-            <div className={style.wrap} >
-              <div className={style.option__wrapper_icons} key={icon.id}>
+            <div className={style.wrap} key={icon.id} >
+              <div className={style.option__wrapper_icons} >
                 <div className={style.option__icons_container}>{icon.icon}</div>
                 <div
                   className={
@@ -102,16 +62,10 @@ function Structure() {
               <p className={style.option__description}>{icon.text}</p>
             </div>
           ))}
-        </div>
-        {/* <div className={style.option__wrapper_description} >
-          {optionsText.map((option) => (
-            <div  key={option.id}>
-              <p className={style.option__description}>{option.text}</p>
-            </div>
-          ))}
-        </div> */}
+        </motion.div>
       </div>
     </section>
+
   );
 }
 
