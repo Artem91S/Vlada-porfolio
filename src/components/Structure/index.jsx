@@ -43,14 +43,14 @@ function Structure() {
     target: targetRef,
     
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["3%", "-65%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["-65%", "3%"]);
   return (
     <section className={style.container} ref={targetRef} >
       <h2 className={style.container__title}>some title for block</h2>
       <div className={style.container__option}   >
-        <motion.div className={style.container__option_icons } style={{ x }}  >
+        <motion.div className={style.container__option_icons} style={{ x }}  >
           {optionsIcon.map((icon) => (
-            <div className={style.wrap} key={icon.id} >
+            <div className={style.option__wrap} key={icon.id} >
               <div className={style.option__wrapper_icons} >
                 <div className={style.option__icons_container}>{icon.icon}</div>
                 <div

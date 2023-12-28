@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./ProjectsType.module.scss";
 import { LuSofa } from "react-icons/lu";
 import { BsHouse } from "react-icons/bs";
 import { BsBasket } from "react-icons/bs";
 import { LuPictureInPicture } from "react-icons/lu";
 import { BsBank } from "react-icons/bs";
+import { AiOutlineUpCircle } from "react-icons/ai";
+import { AiOutlineDownCircle } from "react-icons/ai";
 
 const typesList = [
   {
@@ -33,7 +35,7 @@ const typesList = [
   },
   {
     id: "3d Floor Plan",
-    icon: <LuPictureInPicture className={style.icons__size}/>,
+    icon: <LuPictureInPicture className={style.icons__size} />,
     header: "ЗД план підлоги",
     text: `Послуга 3д план підлоги допомагає легко зрозуміти ваш проєкт ,так як це демонструє загальне планування по поверхах у візуально привабливій формі.Такі плани дають змогу краще зрозуміти масштаб приміщення та меблів відносно один одного ,їхнє розміщення ,гармонійність простору ,розміщення текстур та як вони поєднуються одна з одною .Це чудовий приклад ,як можна відчути свій простір і зрозуміти як його краще заповнити.
     До 3д планів ви можете додати візуалізації конкретних приміщень, які вас цікавлять або всіх кімнат.
@@ -49,6 +51,7 @@ const typesList = [
   },
 ];
 function ProjectsType() {
+  const [showMore, setShowMore] = useState("");
   return (
     <section className={style.container}>
       <h2 className={style.container__title}>some title for block</h2>
@@ -57,9 +60,35 @@ function ProjectsType() {
           <div className={style.box_items__type} key={type.id}>
             <div className={style.box_items__icon}>{type.icon}</div>
             <div>
-              <h3 className={style.box_items__title} >{type.header}</h3>
-              <p className={style.box_items__description}>
-               {type.text}
+              <div className={style.title__container}>
+              <h3 className={style.box_items__title}>{type.header}</h3>
+              {showMore === type.id ? (
+                <AiOutlineUpCircle
+                  className={style.button__show_more}
+                  onClick={() => {
+                    setShowMore("");
+                  }}
+                />
+              ) : (
+                <AiOutlineDownCircle
+                  className={style.button__show_more}
+                  onClick={() => {
+                    setShowMore(type.id);
+                  }}
+                />
+              )}
+              </div>
+            
+             
+
+              <p
+                className={
+                  showMore === type.id
+                    ? style.box_items__description_more
+                    : style.box_items__description
+                }
+              >
+                {type.text}
               </p>
             </div>
           </div>

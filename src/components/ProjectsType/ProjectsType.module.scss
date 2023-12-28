@@ -1,6 +1,6 @@
 .container {
   padding: 50px 20px;
-  background: linear-gradient(#111, #3E3632);
+  background: linear-gradient(#111, #3e3632);
   border-bottom: 1px solid #eee;
   &__title {
     padding-bottom: 20px;
@@ -34,19 +34,45 @@
     border: 1px solid #eee;
     border-radius: 50%;
   }
-  &__title{
+  &__title {
     font-size: 18px;
     line-height: 22px;
     padding-bottom: 20px;
   }
-  &__description{
+  &__description {
+    overflow: hidden;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 1.1px;
+    max-height: 150px;
+    transition: all 0.2s;
+    // -webkit-box-shadow: inset 0px -52px 0px 0px rgba(255, 255, 255,0.1);
+    // -moz-box-shadow: inset 0px -52px 0px 0px rgba(255, 255, 255, 0.12);
+    // box-shadow: inset 0px -3px 0px 0px rgba(255,255,255, 0.12);
+  }
+  &__description_more {
+    transition: all 0.4s;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.1px;
+    max-height: 100%;
   }
 }
+.button__show_more {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
 
-.icons__size{
+.icons__size {
   width: 25px;
   height: 25px;
+}
+
+.title__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
