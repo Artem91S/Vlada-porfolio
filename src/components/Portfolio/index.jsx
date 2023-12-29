@@ -19,36 +19,36 @@ import Wardrobe from '../../assets/image/portfolio/Wardrobe.jpg'
 const posters=[
   {
     id:'1',
-    img:Bathroom
+    img:'./src/assets/image/portfolio/Bathroom.jpg'
   },
   {
     id:'2',
-    img:Bedroom
+    img:'./src/assets/image/portfolio/Bedroom.jpg'
   },
-  {
-    id:'3',
-    img:Cabinet
-  },
-  {
-    id:'4',
-    img:Commercial
-  },
-  {
-    id:'5',
-    img:Kitchen
-  },
-  {
-    id:'6',
-    img:Living_room
-  },
-  {
-    id:'7',
-    img:Patio
-  },
-  {
-    id:'8',
-    img:Wardrobe
-  },
+  // {
+  //   id:'3',
+  //   img:Cabinet
+  // },
+  // {
+  //   id:'4',
+  //   img:Commercial
+  // },
+  // {
+  //   id:'5',
+  //   img:Kitchen
+  // },
+  // {
+  //   id:'6',
+  //   img:Living_room
+  // },
+  // {
+  //   id:'7',
+  //   img:Patio
+  // },
+  // {
+  //   id:'8',
+  //   img:Wardrobe
+  // },
 
 ]
 
@@ -67,8 +67,8 @@ function Portfolio() {
       >
         {
           posters.map(slide=>(
-            <SwiperSlide key={slide.id}   className={style.swiper_container__slide} >
-              <img src={slide.img} alt="slide"/>
+            <SwiperSlide key={slide.id}  className={style.swiper_container__slide} style={{background:`url(${slide.img})no-repeat center/cover`}} >
+              {/* <img src={slide.img} alt="slide"/> */}
             </SwiperSlide>
           ))
         }
