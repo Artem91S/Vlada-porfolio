@@ -7,23 +7,23 @@ import "swiper/swiper-bundle.css";
 import { FiArrowLeft } from "react-icons/fi";
 import { FiArrowRight } from "react-icons/fi";
 
-import Bathroom from '../../assets/image/portfolio/Bathroom.jpg'
-import Bedroom from '../../assets/image/portfolio/Bedroom.jpg'
-import Cabinet from '../../assets/image/portfolio/Cabinet.jpg'
-import Commercial from '../../assets/image/portfolio/Commercial.jpg'
-import Kitchen from '../../assets/image/portfolio/Kitchen.jpg'
-import Living_room from '../../assets/image/portfolio/Living-room.jpg'
-import Patio from '../../assets/image/portfolio/Patio.jpg'
-import Wardrobe from '../../assets/image/portfolio/Wardrobe.jpg'
+// import Bathroom from '../../assets/image/portfolio/Bathroom.jpg'
+// import Bedroom from '../../assets/image/portfolio/Bedroom.jpg'
+// import Cabinet from '../../assets/image/portfolio/Cabinet.jpg'
+// import Commercial from '../../assets/image/portfolio/Commercial.jpg'
+// import Kitchen from '../../assets/image/portfolio/Kitchen.jpg'
+// import Living_room from '../../assets/image/portfolio/Living-room.jpg'
+// import Patio from '../../assets/image/portfolio/Patio.jpg'
+// import Wardrobe from '../../assets/image/portfolio/Wardrobe.jpg'
 
 const posters=[
   {
     id:'1',
-    img:'../../assets/image/Cabinet_2.jpg'
+    img:'/images/portfolio/Bathroom.jpg'
   },
   {
     id:'2',
-    img:'./src/assets/image/portfolio/Bedroom.jpg'
+    img:'/images/portfolio/Bathroom.jpg'
   },
   // {
   //   id:'3',
@@ -67,9 +67,9 @@ function Portfolio() {
       >
         {
           posters.map(slide=>(
-            <SwiperSlide key={slide.id} >
+            <SwiperSlide key={slide.id} className={style.swiper_container__slide} style={{background:`url(${slide.img})no-repeat center/cover`}} >
               {/* <img src={slide.img} alt="slide"/> */}
-              <div   className={style.swiper_container__slide} style={{background:`url(${slide.img})no-repeat center/cover`}}>
+              <div   >
 
               </div>
             </SwiperSlide>
