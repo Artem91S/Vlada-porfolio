@@ -67,7 +67,7 @@ function Portfolio() {
       >
         {
           posters.map(slide=>(
-            <SwiperSlide key={slide.id}  className={style.swiper_container__slide} style={{background:`url(${slide.img})no-repeat center/cover`}} >
+            <SwiperSlide key={slide.id}  className={style.swiper_container__slide} style={{background:'url("../src/assets/image/portfolio/Bathroom.jpg")no-repeat center/cover'}} >
               {/* <img src={slide.img} alt="slide"/> */}
             </SwiperSlide>
           ))
