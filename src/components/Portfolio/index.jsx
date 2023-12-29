@@ -19,11 +19,11 @@ import Wardrobe from '../../assets/image/portfolio/Wardrobe.jpg'
 const posters=[
   {
     id:'1',
-    img:'../../assets/image/portfolio/Bathroom.jpg'
+    img:'/assets/image/portfolio/Bathroom.jpg'
   },
   {
     id:'2',
-    img:'../../assets/image/portfolio/Bedroom.jpg'
+    img:'/assets/image/portfolio/Bedroom.jpg'
   },
   // {
   //   id:'3',
