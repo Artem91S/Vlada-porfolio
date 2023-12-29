@@ -10,35 +10,35 @@ import { FiArrowRight } from "react-icons/fi";
 const posters=[
   {
     id:'1',
-    img:"../src/assets/image/portfolio/Bathroom.jpg"
+    img:"../assets/image/portfolio/Bathroom.jpg"
   },
   {
     id:'2',
-    img:"../src/assets/image/portfolio/Bedroom.jpg"
+    img:"../assets/image/portfolio/Bedroom.jpg"
   },
   {
     id:'3',
-    img:"../src/assets/image/portfolio/Cabinet.jpg"
+    img:"../assets/image/portfolio/Cabinet.jpg"
   },
   {
     id:'4',
-    img:"../src/assets/image/portfolio/Commercial.jpg"
+    img:"../assets/image/portfolio/Commercial.jpg"
   },
   {
     id:'5',
-    img:"../src/assets/image/portfolio/Kitchen.jpg"
+    img:"../assets/image/portfolio/Kitchen.jpg"
   },
   {
     id:'6',
-    img:"../src/assets/image/portfolio/Living-room.jpg"
+    img:"../assets/image/portfolio/Living-room.jpg"
   },
   {
     id:'7',
-    img:"../src/assets/image/portfolio/Patio.jpg"
+    img:"../assets/image/portfolio/Patio.jpg"
   },
   {
     id:'8',
-    img:"../src/assets/image/portfolio/Wardrobe.jpg"
+    img:"../assets/image/portfolio/Wardrobe.jpg"
   },
 
 ]
