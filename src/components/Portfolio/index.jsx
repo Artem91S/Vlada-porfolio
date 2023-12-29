@@ -19,7 +19,7 @@ import Wardrobe from '../../assets/image/portfolio/Wardrobe.jpg'
 const posters=[
   {
     id:'1',
-    img:'./src/assets/image/portfolio/Bathroom.jpg'
+    img:'../../assets/image/portfolio/Bathroom.jpg'
   },
   {
     id:'2',
