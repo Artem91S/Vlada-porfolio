@@ -43,7 +43,7 @@ function Structure() {
     target: targetRef,
     
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["-65%", "3%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["-65%","3%"]);
   return (
     <section className={style.container} ref={targetRef} >
       <h2 className={style.container__title}>some title for block</h2>

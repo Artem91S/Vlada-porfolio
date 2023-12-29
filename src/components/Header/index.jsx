@@ -1,25 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
-import { motion, AnimatePresence } from "framer-motion";
 import style from "./Header.module.scss";
 import Menu from "./Menu";
 
-// const textAnimation = {
-//   hidden: {
-//     // x: -10,
-//     opacity: 0,
-//     transition: { delay:  0.4 },
-//   },
-//   visible: (custom) => ({
-//     // x: 0,
-//     opacity: 1,
-//     transition: { delay:  0.4 },
-//   }),
-// };
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(()=>{
+    if(showMenu){
+      document.body.style.overflow = 'hidden'
+    }
+   else{
+    document.body.style.overflow = 'auto'
+   }
+  },[showMenu])
   return (
     <header className={style.container}>
       <div className={style.container__title}>

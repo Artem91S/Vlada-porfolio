@@ -1,52 +1,63 @@
-.portfolio{
-    &__containar{
-        overflow: hidden;
-        padding:100px 20px ;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-    }
-    &__title{
-        font-size: 40px;
-    }
-    &__swiper_container{
-        width: 320px;
-        height: 500px;
-        padding: 40px 0;
-        }
-    &__button_container{
-        cursor: pointer;
-        display: flex;
-        width: 100%;
-        justify-content:end;
-        gap:20px;
-        padding: 30px 0;
-    }
+.portfolio {
+  &__containar {
+    overflow: hidden;
+    padding: 100px 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: 40px;
+  }
+  &__swiper_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  &__wrapper{
+    // width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+  &__button_container {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    gap: 20px;
+    padding: 30px 0;
+  }
 }
 
 .swiper_container {
-    &__slide{
-        transition: all 0.4s;
-        width: 320px;
-        height: 500px;
-        display: flex;
-        gap:20px;
-    }
+  &__slide {
+    transition: all 0.4s;
+    min-width: 300px;
+    width: 100%;
+    min-height: 500px ;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
 
-.button_container{
-    &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: transparent;
-        border:1px solid #eee;
-        padding: 10px 10px;
-        border-radius: 50%;
-    }
+.button_container {
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #eee;
+    padding: 10px 10px;
+    border-radius: 50%;
+  }
 }
 .arrow {
-    width: 20px;
-    height: 20px;
-    color:#eee;
+  width: 20px;
+  height: 20px;
+  color: #eee;
 }
