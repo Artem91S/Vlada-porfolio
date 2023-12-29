@@ -27,8 +27,8 @@
 .swiper_container {
     &__slide{
         transition: all 0.4s;
-        // width: 320px;
-        // height: 500px;
+        width: 320px;
+        height: 500px;
         display: flex;
         gap:20px;
     }
