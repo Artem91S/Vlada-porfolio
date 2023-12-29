@@ -23,32 +23,32 @@ const posters=[
   },
   {
     id:'2',
-    img:'/images/portfolio/Bathroom.jpg'
+    img:'/images/portfolio/Bedroom.jpg'
   },
-  // {
-  //   id:'3',
-  //   img:Cabinet
-  // },
-  // {
-  //   id:'4',
-  //   img:Commercial
-  // },
-  // {
-  //   id:'5',
-  //   img:Kitchen
-  // },
-  // {
-  //   id:'6',
-  //   img:Living_room
-  // },
-  // {
-  //   id:'7',
-  //   img:Patio
-  // },
-  // {
-  //   id:'8',
-  //   img:Wardrobe
-  // },
+  {
+    id:'3',
+    img:'/images/portfolio/Cabinet.jpg'
+  },
+  {
+    id:'4',
+    img:'/images/portfolio/Commercial.jpg'
+  },
+  {
+    id:'5',
+    img:'/images/portfolio/Kitchen.jpg'
+  },
+  {
+    id:'6',
+    img:'/images/portfolio/Living_room.jpg'
+  },
+  {
+    id:'7',
+    img:'/images/portfolio/Patio.jpg'
+  },
+  {
+    id:'8',
+    img:'/images/portfolio/Wardrobe.jpg'
+  },
 
 ]
 
